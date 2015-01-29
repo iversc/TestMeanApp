@@ -17,7 +17,8 @@ module.exports = function(Testpack, app, auth, database) {
 
   app.get('/testpack/example/testlink', auth.requiresLogin, function(req, res, next) {
 	res.send('This is the test link page for now.');
-  });
+      
+});
 
   app.get('/testpack/example/render', function(req, res, next) {
     Testpack.render('index', {
